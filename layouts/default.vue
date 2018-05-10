@@ -6,10 +6,23 @@
     <div>
       <!-- 头部导航栏 -->
       <mu-appbar title="v2ex-nuxt">
-        <mu-icon-button icon="menu" slot="left" @click="open('left')"/>
+        <mu-icon-button icon="menu" slot="left" @click="toggle(true)"/>
       </mu-appbar>
+
+      <mu-drawer :open="open" :docked="docked" @close="toggle()">
+        <!-- <mu-avatar  slot="left" src="/images/uicon.jpg" :size="40"/> -->
+        <mu-list @itemClick="docked ? '' : toggle()">
+          <mu-list-item title="最新" to="/new"/>
+          <mu-list-item title="最热" to="/hot"/>
+          <!-- <mu-list-item title="联系我" to="/about"/> -->
+          <mu-list-item v-if="docked" @click.native="open = false" title="Close"/>
+        </mu-list>
+    </mu-drawer>
+
+
+
       <!-- 左侧弹框 -->
-       <mu-popup position="left" popupClass="demo-popup-left" :open="leftPopup" @close="close('left')">
+       <!-- <mu-popup position="left" popupClass="demo-popup-left" :open="leftPopup" @close="close('left')">
          <mu-list>
           <mu-list-item title="全部">
             <mu-icon slot="left" value="inbox"/>
@@ -18,7 +31,7 @@
             <mu-icon slot="left" value="drafts"/>
           </mu-list-item>
         </mu-list>
-      </mu-popup>
+      </mu-popup> -->
       <!-- 中间内容 -->
       <nuxt/>
       <!-- 底部栏 -->
@@ -35,19 +48,29 @@ export default {
   },
   data () {
     return {
-      bottomPopup: false,
-      topPopup: false,
-      leftPopup: false,
-      rightPopup: false
+       open: false,
+      docked: true,
+
+
+      // bottomPopup: false,
+      // topPopup: false,
+      // leftPopup: false,
+      // rightPopup: false
     }
   },
   methods: {
-    open (position) {
-      this[position + 'Popup'] = true
+    toggle (flag) {
+      this.open = !this.open
+      this.docked = !flag
     },
-    close (position) {
-      this[position + 'Popup'] = false
-    }
+
+
+    // open (position) {
+    //   this[position + 'Popup'] = true
+    // },
+    // close (position) {
+    //   this[position + 'Popup'] = false
+    // }
   },
 }
 </script>

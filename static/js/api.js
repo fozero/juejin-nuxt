@@ -55,9 +55,14 @@ export function fetchGet (url, params) {
 
 
 export default {
+  // 最热主题
+  getHotTopics(){
+    return fetchGet('/topics/hot.json')
+  },
+  // 最新主题
   getLatestTopics(){
     return fetchGet('/topics/latest.json')
-  }
+  },
  /**
   * 获取广告信息
   */

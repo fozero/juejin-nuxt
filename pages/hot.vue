@@ -1,17 +1,12 @@
 <template>
   <section class="container">
-    <!-- <h1 class="title">
-      hello boy~
-    </h1>
-    <nuxt-link class="button" to="/about">
-      ABOUT
-    </nuxt-link> -->
     <div class="container__right">
+      fdsfdsfsd
     	<ul>
-    		<li v-for="(item,index) in list">
+    		<!-- <li v-for="(item,index) in list">
     			<div class="title" v-text="item.title"></div>
     			<div class="content" v-html="item.content"></div>
-    		</li>
+    		</li> -->
     	</ul>
     </div>
   </section>
@@ -22,13 +17,13 @@
 import api from '../static/js/api.js'
 
 export default {
-  async asyncData ({}) {
-  	return api.getLatestTopics()
-  		.then((res)=>{
-  			console.log(res)
-  			return {list:res}
-  		})
-  },
+  // async asyncData ({}) {
+  // 	return api.getHotTopics()
+  // 		.then((res)=>{
+  // 			console.log(res)
+  // 			return {list:res}
+  // 		})
+  // },
   data(){
   	return {
 
