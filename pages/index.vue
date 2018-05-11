@@ -1,11 +1,6 @@
 <template>
   <section class="container">
-    <!-- <h1 class="title">
-      hello boy~
-    </h1>
-    <nuxt-link class="button" to="/about">
-      ABOUT
-    </nuxt-link> -->
+    hello
     <div class="container__right">
     	<ul>
     		<li v-for="(item,index) in list">

@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'v2ex',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -27,6 +27,7 @@ module.exports = {
   */
   loading: { color: '#3B8070' },
   plugins:[
+    '~plugins/element-ui.js',
     '~/plugins/muse-ui.js'
   ],
   modules: [
@@ -51,7 +52,17 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['axios']
+    vendor: ['axios'],
+    babel: {
+      plugins: [
+        ['component', [
+          {
+            libraryName: 'element-ui',
+            styleLibraryName: 'theme-chalk'
+          }
+        ]]
+      ]
+    }
     /*
      ** Run ESLINT on save
      */
