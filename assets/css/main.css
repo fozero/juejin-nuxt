@@ -20,10 +20,10 @@ a, a:hover, a:focus, a:visited
   color: #41B883;
 }
 
-.logo {
+/*.logo {
   width: 243px;
   height: 218px;
-}
+}*/
 
 .page-enter-active, .page-leave-active
 {

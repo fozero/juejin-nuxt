@@ -4,7 +4,9 @@ import qs from 'qs'
 // axios 配置
 axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
-axios.defaults.baseURL = 'https://www.v2ex.com/api/'
+// axios.defaults.baseURL = 'https://www.v2ex.com/api/'
+axios.defaults.baseURL = 'https://www.easy-mock.com/mock/5af328a75aa3347303d50880/'
+
 
 // POST传参序列化
 axios.interceptors.request.use((config) => {
@@ -63,6 +65,16 @@ export default {
   getLatestTopics(){
     return fetchGet('/topics/latest.json')
   },
+
+
+  getTest(){
+    return fetchGet('/example/test')
+  }
+
+
+
+
+
  /**
   * 获取广告信息
   */
