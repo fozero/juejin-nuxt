@@ -1,7 +1,7 @@
 <template><div class="layout">
       <div class="header">
         <div class="logo">
-          掘金nuxt
+          掘金
         </div>
         <div class="nav">
           <mu-tabs :value="activeTab" @change="handleTabChange" class="tab">
@@ -45,16 +45,16 @@ activeTab: 'tab1'
 }
 
 .header{
-  background-color: #7e57c2;
+  background-color: #fff;
       position: fixed;
     width: 100%;
     left: 0;
     top: 0;
         z-index: 9999;
+        color:#007fff;
 }
 .logo{
   font-size: 24px;
-  color: white;
   display: inline-block;
   padding: 10px 20px;
 }
@@ -65,10 +65,18 @@ activeTab: 'tab1'
   margin: 0 auto;
 }
 
+
 .tab{
   margin: 0 auto;
   width: 400px;
   background-color: rgba(0, 0, 0, 0);
+}
+.mu-tab-link{
+  color:#71777c;
+}
+.mu-tab-active{
+  color:#007fff;
+  border-bottom: none;
 }
 
 .content{

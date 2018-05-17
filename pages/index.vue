@@ -1,13 +1,15 @@
 <template>
 <div class="container">
     <div class="main">
-      <ul class="tabs">
-        <li class="tab">热门文章</li>
-        <li class="tab">推荐</li>
-        <li class="tab">前端</li>
-        <li class="tab">Android</li>
-        <li class="tab">后端</li>
-      </ul>
+      <div class="menu clearfix">
+        <div class="fl title">热门文章</div>
+        <ul class="fl tabs">
+          <li class="tab" :class="activeTab==1?'selected':''" @click="tab(1)">推荐</li>
+          <li class="tab" :class="activeTab==2?'selected':''" @click="tab(2)">前端</li>
+          <li class="tab" :class="activeTab==3?'selected':''" @click="tab(3)">Android</li>
+          <li class="tab" :class="activeTab==4?'selected':''" @click="tab(4)">后端</li>
+        </ul>
+      </div>
       <ul class="contents">
         <li class="content">
           <div class="title">
@@ -110,7 +112,7 @@ export default {
   // },
   data () {
     return {
-      activeTab: 'tab1'
+      activeTab: '1'
     }
   },
   methods: {
@@ -119,6 +121,9 @@ export default {
     },
     handleActive () {
       window.alert('tab active')
+    },
+    tab(type){
+      this.activeTab=type;
     }
   }
 
@@ -136,6 +141,10 @@ export default {
 .clearfix{clear: both;}
 .main{float:left;background: #fff;width: 600px;margin-top: 40px;}
 .side{float:left;background: #fff;width: 200px;margin-left: 20px;margin-top: 40px;}
+.main .menu{
+  padding: 20px 10px;
+}
+.main .menu .title{}
 .tabs{
   list-style: none;
   border-bottom: 1px solid #eee;
@@ -143,6 +152,9 @@ export default {
 .tabs .tab{
   display: inline-block;
   padding: 20px 10px;
+}
+.tabs .selected{
+  color:#007fff;
 }
 .contents{
   list-style: none;
