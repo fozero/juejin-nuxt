@@ -1,5 +1,4 @@
-<template>
-    <div class="layout">
+<template><div class="layout">
       <div class="header">
         <div class="logo">
           掘金nuxt
@@ -29,7 +28,7 @@ export default {
   },
   data () {
     return {
-      activeTab: 'tab1'
+activeTab: 'tab1'
     }
   },
   methods: {
@@ -53,7 +52,6 @@ export default {
     top: 0;
         z-index: 9999;
 }
-
 .logo{
   font-size: 24px;
   color: white;

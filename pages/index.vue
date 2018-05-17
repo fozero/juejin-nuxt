@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+<div class="container">
     <div class="main">
       <ul class="tabs">
         <li class="tab">热门文章</li>

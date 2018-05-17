@@ -77,7 +77,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'starter',
+    title: 'v2ex',
     meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { hid: 'description', name: 'description', content: 'Nuxt.js project' }],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }, { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic' }, { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }]
   },
@@ -89,7 +89,7 @@ module.exports = {
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
-  plugins: ['~/plugins/muse-ui.js'],
+  plugins: ['~plugins/element-ui.js', '~/plugins/muse-ui.js'],
   modules: ['@nuxtjs/axios', '@nuxtjs/proxy'],
   axios: {
     // baseURL: 'https://proxy-oagpwnbkpe.now.sh',
@@ -104,21 +104,26 @@ module.exports = {
    ** Build configuration
    */
   build: {
-    vendor: ['axios']
-    /*
-     ** Run ESLINT on save
-     */
-    // extend (config, ctx) {
-    //   if (ctx.isClient) {
-    //     config.module.rules.push({
-    //       enforce: 'pre',
-    //       test: /\.(js|vue)$/,
-    //       loader: 'eslint-loader',
-    //       exclude: /(node_modules)/
-    //     })
-    //   }
-    // }
-  }
+    vendor: ['axios'],
+    babel: {
+      plugins: [['component', [{
+        libraryName: 'element-ui',
+        styleLibraryName: 'theme-chalk'
+      }]]]
+      /*
+       ** Run ESLINT on save
+       */
+      // extend (config, ctx) {
+      //   if (ctx.isClient) {
+      //     config.module.rules.push({
+      //       enforce: 'pre',
+      //       test: /\.(js|vue)$/,
+      //       loader: 'eslint-loader',
+      //       exclude: /(node_modules)/
+      //     })
+      //   }
+      // }
+    } }
 };
 
 /***/ },
@@ -152,8 +157,8 @@ module.exports = require("regenerator-runtime");
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_koa___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_koa__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_nuxt__ = __webpack_require__(3);
@@ -161,11 +166,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 
 
 var start = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2() {
     var _this = this;
 
     var app, host, port, config, nuxt, builder;
-    return __WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+    return __WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
@@ -196,8 +201,8 @@ var start = function () {
           case 10:
 
             app.use(function () {
-              var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
-                return __WEBPACK_IMPORTED_MODULE_0_D_workspaces_www_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+              var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+                return __WEBPACK_IMPORTED_MODULE_0__Users_yd_Documents_www_workspa_vue_nuxt_ssr_koa_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
                   while (1) {
                     switch (_context.prev = _context.next) {
                       case 0:
