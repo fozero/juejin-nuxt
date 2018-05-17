@@ -1,6 +1,6 @@
-# vue-nuxt-ssr-koa
+# juejin-nuxt
 
-> Nuxt.js project
+> A juejin-nuxt demo.
 
 ## Build Setup
 
